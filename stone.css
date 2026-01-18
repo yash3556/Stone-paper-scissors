@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #59C173;  
+    background: -webkit-linear-gradient(to right, #5D26C1, #a17fe0, #59C173);  
+    background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173); 
+    font-family: Arial, sans-serif;
+}
+
+main{
+    text-align: center; 
+    margin-top: 40px;
+}
+
+h1{
+    color: white;
+}
+.game{
+    margin-top:20px;
+    padding: 20px;
+    
+}
+.start p{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 40px;
+    margin-top: 80px;;
+}
+select{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color:rgba(255, 255, 255, 0.2);
+}
+option{
+    background-color:white;
+    color: black;
+}
+#rounds-btn{
+    margin-left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #f7971e, #ffd200);
+    color: white;
+    cursor: pointer;
+}
+.score-section{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: max-content;
+    width: 500px;
+    border-radius: 50px;
+    padding: 10px 0;
+}
+
+.score-section p{
+    font-size: 40px;
+    color: white;
+}
+
+.score-section h2{
+    color: white;
+    margin: 0;
+}
+
+
+.player-choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 30px auto 0;
+    width: 600px;
+}
+
+.player-choice img{
+    height: 200px;
+    margin-top: 60px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.player-choice img:hover{
+    transform: scale(1.1);
+}
+
+
+.battle-area{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  margin: 30px auto 0;
+}
+
+
+.battle-area img{
+    height: 200px;
+    border-radius: 50px;
+}
+
+
+.result{
+    margin-top: 30px;
+    font-size: 30px;
+    color: white;
+}
+
+
+#reset-btn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    height: 80px;
+    width: 300px;
+    border: none;
+    margin-top: 100px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #5f2c82, #49a09d);
+    color: white;
+    cursor: pointer;
+}
+
+
+.shake{
+    animation: comboShake 1s ease;
+}
+
+#start-btn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    height: 80px;
+    width: 300px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+@keyframes comboShake {
+    0% { transform: translateX(0) rotate(0); }
+    25% { transform: translateX(-5px) rotate(-3deg); }
+    50% { transform: translateX(5px) rotate(3deg); }
+    75% { transform: translateX(-5px) rotate(-3deg); }
+    100% { transform: translateX(0) rotate(0); }
+}
+
+
+.hide{
+    display: none;
+}
+
+@media (max-width: 768px){
+    main{
+        padding: 15px;
+        margin-top: 20px;
+    }
+    
+    h1{
+        font-size: 32px;
+    }
+    
+    .score-section{
+        width: 90%;
+        max-width: 400px;
+        padding: 15px;
+    }
+    
+    .score-section p{
+        font-size: 35px;
+    }
+    
+    .start p{
+        font-size: 28px;
+        margin-top: 40px;
+    }
+    
+    .player-choice{
+        width: 100%;
+        gap: 30px;
+    }
+    
+    .player-choice img{
+        height: 150px;
+    }
+    
+    .battle-area{
+        gap: 80px;
+    }
+    
+    .battle-area img{
+        height: 150px;
+    }
+}
+
+@media (max-width: 430px){
+    main{
+        padding: 10px;
+        margin-top: 10px;
+    }
+    
+    h1{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .game{
+        margin-top: 10px;
+        padding: 10px;
+    }
+    
+    .score-section{
+        width: 95%;
+        max-width: 100%;
+        padding: 15px 10px;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 15px;
+    }
+    
+    .score-section p{
+        font-size: 28px;
+    }
+    
+    .score-section h2{
+        font-size: 16px;
+    }
+    
+    .start{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .start p{
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+        padding: 0 10px;
+    }
+    
+    select{
+        width: 90%;
+        max-width: 250px;
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    #rounds-btn{
+        margin-left: 0;
+        margin-top: 0;
+        padding: 8px 20px;
+        font-size: 14px;
+        width: 90%;
+        max-width: 250px;
+    }
+    
+    .player-choice{
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        margin-top: 15px;
+        padding: 0 10px;
+    }
+    
+    .player-choice img{
+        height: 100px;
+        margin-top: 10px;
+        width: auto;
+        max-width: 100px;
+    }
+    
+    .battle-area{
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+    
+    .battle-area img{
+        height: 100px;
+        width: auto;
+        max-width: 100px;
+    }
+    
+    .result{
+        font-size: 18px;
+        padding: 0 10px;
+        margin-top: 20px;
+    }
+    
+    .result h2{
+        font-size: 18px;
+    }
+    
+    #reset-btn{
+        width: 90%;
+        max-width: 280px;
+        height: 50px;
+        margin-top: 20px;
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    #start-btn{
+        width: 90%;
+        max-width: 280px;
+        height: 50px;
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    button:hover{
+        transform: scale(1.02);
+    }
+}

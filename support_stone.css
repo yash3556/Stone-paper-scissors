@@ -1,0 +1,263 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+}
+.bag{
+    background: #A770EF;  
+    background: -webkit-linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);  
+    background: linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF); 
+    height: 400px;
+   margin-top: 0px;
+}
+header{
+     display: flex;
+    gap: 100px;
+     align-items: flex-start;
+    margin-left: 90px;
+    margin-top: 0px;
+     color: black;
+    position: relative;
+    
+}
+.logo{
+    margin-top: 40px;
+}
+
+.hamburger{
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.hamburger span{
+    width: 25px;
+    height: 3px;
+    background: black;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1){
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+ul{
+    display: flex;
+    gap: 100px;
+    align-items: flex-start;
+    margin-left: 230px;
+    margin-top: 40px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+@media (max-width: 768px){
+    ul{
+        display: none;
+    }
+}
+
+@media (min-width: 769px){
+    .hamburger{
+        display: none !important;
+    }
+    ul{
+        display: flex;
+    }
+}
+header a li{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+    transform: 3s ease-out;
+    
+}
+a{
+    text-decoration: none;
+    
+}
+ a :hover{
+    transform: scale(1.22);
+    transition: all 0.3s ease;
+    color: yellow;
+}
+h1{
+    font-size: 50px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+}
+.search{
+    margin-top: 20px;
+    background-color: white;
+    height: 40px; 
+    width: 400px;
+    border-radius: 10px;
+}
+input{
+    height: 30px;
+    width:370px;
+    border: none;
+    outline: none;
+    margin-left: 2px;
+    margin-top: 2px;
+    padding-left: 5px;
+}
+button{
+    background-color: white;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 450px 450px 450px;
+    grid-row-gap: 20px;
+    grid-column-gap:50px;
+
+}
+.box{
+    margin: 50px;
+    background-color: lightcyan;
+    height: 200px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: 2s ease-out;
+}
+.box:hover{
+     transform: scale(1.2);
+     transition: all 3s ease-out;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+.fa-solid{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 30px;
+}
+h3{
+    margin-left: 20px;
+}
+p{
+    margin-left: 20px;
+}
+
+@media (max-width: 768px){
+    header{
+        margin-left: 20px;
+        margin-top: 10px;
+        gap: 0;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 20px;
+    }
+    
+    .logo{
+        margin-top: 0;
+        font-size: 18px;
+    }
+    
+    .hamburger{
+        display: flex;
+        margin-top: 0;
+    }
+    
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        background: rgba(167, 112, 239, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        margin-left: 0;
+        margin-top: 0;
+        gap: 0;
+        padding-top: 80px;
+        height: 100vh;
+        z-index: 1000;
+    }
+    
+    .nav-menu.active{
+        left: 0;
+    }
+    
+    .nav-menu a{
+        padding: 20px;
+        display: block;
+        width: 100%;
+    }
+    
+    .nav-menu a li{
+        font-size: 18px;
+        color: white;
+    }
+    
+    .bag{
+        height: auto;
+        padding-bottom: 30px;
+    }
+    
+    .content{
+        height: auto;
+        padding: 20px 10px;
+    }
+    
+    h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .search{
+        width: 90%;
+        max-width: 350px;
+    }
+    
+    input{
+        width: calc(100% - 50px);
+    }
+    
+    .grid{
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+        grid-column-gap: 0;
+        padding: 10px;
+    }
+    
+    .box{
+        margin: 10px;
+        width: calc(100% - 20px);
+        max-width: 100%;
+        height: auto;
+        min-height: 180px;
+        padding-bottom: 20px;
+    }
+    
+    .box:hover{
+        transform: scale(1.05);
+    }
+}

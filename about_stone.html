@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="about_stone.css">
+</head>
+<body>
+     <header>
+        <div class="logo">YK GAMERS</div>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+            <a href="main_stone.html"><li>Home</li></a>
+            <a href="about_stone.html"><li>About</li></a>
+            <a href="contact_stone.html"><li>Contact</li></a>
+            <a href="support_stone.html"><li>Support</li></a>
+        </ul>
+    </header>
+    <main>
+        <div class="text">
+            <h1>ABOUT</h1>
+            <h1>THE</h1>
+            <h1>GAME</h1>
+            <div class="para">
+
+            <p>Stone Paper Scissors is a simple yet exciting game built to bring quick fun and friendly competition to everyone. Based on the classic hand game we all grew up playing, it challenges players to think fast and trust their instincts—stone breaks scissors, scissors cut paper, and paper covers stone. Whether you’re playing to pass time, challenge a friend, or test your luck against the computer, this game offers a clean, easy-to-use experience with instant results and endless replay value</p>
+        </div></div>
+        <div class="image">
+            <img id="img" src="about.jpg">
+        </div>
+    </main>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

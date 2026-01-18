@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stone Paper Scissors</title>
+  <link rel="stylesheet" href="stone.css">
+</head>
+<body>
+
+<main>
+  <h1>STONE PAPER SCISSORS</h1>
+
+  <div class="score-section">
+    <div>
+      <h2>Player</h2>
+      <p id="play-score">0</p>
+    </div>
+    <div>
+      <h2>Computer</h2>
+      <p id="com-score">0</p>
+    </div>
+  </div>
+  
+  <div class="game">
+     <button id="start-btn">Start Game</button>
+  </div>
+<div class="start hide">
+  <p>Select The Number Of Rounds</p>
+    <select id="rounds-select">
+        <option value="select">Select Round</option>
+        <option value="3">3 Rounds</option>
+        <option value="5">5 Rounds</option>
+        <option value="10">10 Rounds</option>
+        </select>
+        <button id="rounds-btn">Confirm</button>
+  </div>
+  
+
+
+  <div class="player-choice hide">
+    <img id="rock" src="rock.png">
+    <img id="paper" src="paper.png">
+    <img id="scissors" src="scissors.png">
+  </div>
+
+
+  <div class="battle-area">
+    <img id="player-hand" src="rock.png">
+    <img id="computer-hand" src="rock.png">
+  </div>
+
+  <div class="result">
+    <h2 id="result-text"></h2>
+    <button id="reset-btn">Reset</button>
+  </div>
+</main>
+
+<script src="stone.js"></script>
+</body>
+</html>

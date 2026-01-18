@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact_stone.css">
+</head>
+<body>
+          <header>
+        <div class="logo">YK GAMERS</div>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+            <a href="main_stone.html"><li>Home</li></a>
+            <a href="about_stone.html"><li>About</li></a>
+            <a href="contact_stone.html"><li>Contact</li></a>
+            <a href="support_stone.html"><li>Support</li></a>
+        </ul>
+    </header>
+    <main>
+        <div class="card">
+            <h2 class="form-title">Get In Touch</h2>
+            <form id="form">
+                <input id="name" type="text" name="name" placeholder="Name" required>
+                <br>
+                <input id="gmail" type="email" name="email" placeholder="abc@gmail.com" required>
+                <br>
+                <textarea id="textarea" placeholder="Ask any question?"></textarea>
+                <button id="btn1" type="button">Submit</button>
+                <br>
+                <button id="btn2"  type="reset">Reset</button>
+
+            </form>
+        </div>
+    </main>
+         
+
+           <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+          <script src="contact_stone.js"></script> 
+          <script>
+            (function(){
+    emailjs.init("AZnufYvx3GZ1yyo4P");
+  })();
+</script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

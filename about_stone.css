@@ -1,0 +1,209 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background: #c31432;  
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  
+    background: linear-gradient(to right, #240b36, #c31432); 
+
+}
+header{
+     display: flex;
+    gap: 100px;
+     align-items: flex-start;
+    margin-left: 90px;
+    margin-top: 10px;
+     color: white;
+    position: relative;
+    
+}
+.logo{
+    margin-top: 40px;
+}
+
+.hamburger{
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.hamburger span{
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1){
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+ul{
+    display: flex;
+    gap: 100px;
+    align-items: flex-start;
+    margin-left: 230px;
+    margin-top: 40px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+@media (max-width: 768px){
+    ul{
+        display: none;
+    }
+}
+
+@media (min-width: 769px){
+    .hamburger{
+        display: none !important;
+    }
+    ul{
+        display: flex;
+    }
+}
+header a li{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+    transform: 3s ease-out;
+    
+}
+a{
+    text-decoration: none;
+    
+}
+ a :hover{
+    transform: scale(1.22);
+    transition: all 0.3s ease;
+    color: black;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 60px;
+    margin-left: 40px;
+}
+h1{
+    font-size: 120px;
+    color: white;
+}
+.para{
+    width: 700px;
+}
+.para p{
+    color: white;
+    font-size: 15px;
+}
+.image{
+    mix-blend-mode: multiply;
+}
+.image img{
+    height: 500px;
+}
+
+@media (max-width: 768px){
+    header{
+        margin-left: 20px;
+        margin-top: 10px;
+        gap: 0;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 20px;
+    }
+    
+    .logo{
+        margin-top: 0;
+        font-size: 18px;
+    }
+    
+    .hamburger{
+        display: flex;
+        margin-top: 0;
+    }
+    
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        background: rgba(195, 20, 50, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        margin-left: 0;
+        margin-top: 0;
+        gap: 0;
+        padding-top: 80px;
+        height: 100vh;
+        z-index: 1000;
+    }
+    
+    .nav-menu.active{
+        left: 0;
+    }
+    
+    .nav-menu a{
+        padding: 20px;
+        display: block;
+        width: 100%;
+    }
+    
+    .nav-menu a li{
+        font-size: 18px;
+    }
+    
+    main{
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 20px;
+        gap: 30px;
+        padding: 10px;
+    }
+    
+    h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    .para{
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .para p{
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .image{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .image img{
+        height: auto;
+        max-width: 100%;
+        width: 250px;
+    }
+}

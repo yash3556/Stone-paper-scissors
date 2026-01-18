@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main_stone.css">
+</head>
+<body>
+    <header>
+        <div class="logo">YK GAMERS</div>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+            <a href="main_stone.html"><li>Home</li></a>
+            <a href="about_stone.html"><li>About</li></a>
+            <a href="contact_stone.html"><li>Contact</li></a>
+            <a href="support_stone.html"><li>Support</li></a>
+        </ul>
+    </header>
+    <main>
+        <div class="image">
+            <img id="img" src="game.jpg">
+        </div>
+
+        <div class="text">
+            <h1>ROCK</h1>
+            <h1>PAPER</h1>
+            <h2>SCISSORS</h2>
+            <div class="para">
+            <p>Welcome to Rock Paper Scissors, a fun and fast-paced game where strategy meets chance! Challenge the computer in this classic showdown and test your instincts as you choose between rock, paper, or scissors. With a clean design, smooth gameplay, and instant results, this game is perfect for quick breaks or friendly competition. Simple to play yet exciting every time, Rock Paper Scissors brings a timeless game to life right in your browser.</p></div>
+            <a href="stone.html"><button id="btn">PLAY</button></a>
+        </div>
+  
+    </main>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
