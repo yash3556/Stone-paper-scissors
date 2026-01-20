@@ -6,7 +6,7 @@ This project is designed with a clean UI, smooth gameplay, and works perfectly o
 ---
 
 ## 🚀 Live Demo
-🔗 https://your-project-name.vercel.app/
+
 
 ---
 
